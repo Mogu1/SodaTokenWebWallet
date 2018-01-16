@@ -30710,7 +30710,7 @@ var ZFooter = function (_React$Component) {
                 'or join our ',
               _react2.default.createElement(
                 'a',
-                { href: 'https://discord.io/hush' },
+                { href: 'https://discord.io/sodatoken/' },
                 'Discord '
               ),
                 'server!'),
@@ -30722,9 +30722,9 @@ var ZFooter = function (_React$Component) {
                 _react2.default.createElement(
                   'b',
                   null,
-                  'HUSH'
+                  'SODA'
                 ),
-                ': t1UDhNq2aEqvxEbPzcRM8n2QJV8YJ664rXJ'
+                'SODA TOKEN WALLET'
               )
             ),
             _react2.default.createElement(
@@ -30744,19 +30744,19 @@ var ZFooter = function (_React$Component) {
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/MyHush/myhushwallet' },
+                { href: 'https://github.com/BinaryOmen/SodaTokenWebWallet/' },
                 'github'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://myhush.slack.com/' },
+                { href: 'https://sodatoken.slack.com/' },
                 'slack'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://discord.io/hush' },
+                { href: 'https://discord.io/sodatoken' },
                 'discord'
               ),
               _react2.default.createElement('br', null)
@@ -31159,7 +31159,7 @@ var ZFaq = function (_React$Component) {
               'A: ',
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/myhush/myhushwallet' },
+                { href: 'https://github.com/BinaryOmen/SodaTokenWebWallet/' },
                 'Here you go'
               )
             ),
@@ -31172,7 +31172,7 @@ var ZFaq = function (_React$Component) {
                 'Q: Why are you doing this?'
               ),
               _react2.default.createElement('br', null),
-              'A: My Hush Wallet was inspired by ',
+              'A: Soda Token Wallet was inspired by ',
               _react2.default.createElement(
                 'a',
                 { href: 'https://myzenwallet.io/' },

@@ -34783,7 +34783,7 @@ var ZNavbar = function (_React$Component) {
           _reactstrap.NavbarBrand,
           { href: '/' },
           _react2.default.createElement('img', { src: '/favicon.ico', height: 42 }),
-          '\xA0wallet.myhush.network' //TODO \xA0 is non breaking space
+          '\xA0webwallet.sodatoken.org' //TODO \xA0 is non breaking space
         ),
         _react2.default.createElement(
           _reactstrap.Collapse,
@@ -38045,7 +38045,7 @@ base.Node = __webpack_require__(448);
 /* 240 */
 /***/ (function(module, exports) {
 
-// https://en.bitcoin.it/wiki/List_of_address_prefixes //TODO2 important to get right prefix for hush
+// https://en.bitcoin.it/wiki/List_of_address_prefixes //TODO2 important to get right prefix for soda token
 // Dogecoin BIP32 is a proposed standard: https://bitcointalk.org/index.php?topic=409731
 
 module.exports = {
@@ -50078,9 +50078,9 @@ var _reactTable = __webpack_require__(362);
 
 var _reactTable2 = _interopRequireDefault(_reactTable);
 
-var _hushjs = __webpack_require__(284);
+var _sodatokenjs = __webpack_require__(284);
 
-var _hushjs2 = _interopRequireDefault(_hushjs); 
+var _sodatokenjs2 = _interopRequireDefault(_sodatokenjs); 
 
 var _utils = __webpack_require__(466);
 
@@ -50210,10 +50210,10 @@ var ZWalletGenerator = function (_React$Component2) {
     key: 'handlePasswordPhrase',
     value: function handlePasswordPhrase(e) {
       // What wif format do we use?
-      var wifHash = this.props.settings.useTestNet ? _hushjs2.default.config.testnet.wif : _hushjs2.default.config.mainnet.wif; //TODO
+      var wifHash = this.props.settings.useTestNet ? _sodatokenjs2.default.config.testnet.wif : _sodatokenjs2.default.config.mainnet.wif; //TODO
 
-      var pk = _hushjs2.default.address.mkPrivKey(e.target.value); //TODO
-      var pkwif = _hushjs2.default.address.privKeyToWIF(pk, true, wifHash); //TODO
+      var pk = _sodatokenjs2.default.address.mkPrivKey(e.target.value); //TODO
+      var pkwif = _sodatokenjs2.default.address.privKeyToWIF(pk, true, wifHash); //TODO
 
       if (e.target.value === '') {
         pkwif = '';
@@ -51055,15 +51055,15 @@ var ZSendHUSH = function (_React$Component6) {
             }
 
             // Create transaction
-            var txObj = _hushjs2.default.transaction.createRawTx(history, recipients);
+            var txObj = _sodatokenjs2.default.transaction.createRawTx(history, recipients);
 
             // Sign each history transcation          
             for (var i = 0; i < history.length; i++) {
-              txObj = _hushjs2.default.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey);
+              txObj = _sodatokenjs2.default.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey);
             }
 
             // Convert it to hex string
-            var txHexString = _hushjs2.default.transaction.serializeTx(txObj);
+            var txHexString = _sodatokenjs2.default.transaction.serializeTx(txObj);
 
             _axios2.default.post(sendRawTxURL, { rawtx: txHexString }).then(function (sendtx_resp) {
               this.setState({
@@ -51086,10 +51086,10 @@ var ZSendHUSH = function (_React$Component6) {
     key: 'render',
     value: function render() {
       // If send was successful
-      var hushTxlink;
+      var sodatokenTxlink;
       if (this.state.sendProgress === 100) {
-        var hushtx = _utils2.default.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid;
-        hushTxlink = _react2.default.createElement(
+        var sodatx = _utils2.default.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid;
+        sodatokenTxlink = _react2.default.createElement(
           _reactstrap.Alert,
           { color: 'success' },
           _react2.default.createElement(
@@ -51100,7 +51100,7 @@ var ZSendHUSH = function (_React$Component6) {
           ' ',
           _react2.default.createElement(
             'a',
-            { href: hushtx },
+            { href: sodatx },
             'Click here to view your transaction'
           )
         );
@@ -51108,7 +51108,7 @@ var ZSendHUSH = function (_React$Component6) {
 
       // Else show error why
       else if (this.state.sendErrorMessage !== '') {
-          hushTxlink = this.state.sendErrorMessage.split(';').map(function (s) {
+          sodatokenTxlink = this.state.sendErrorMessage.split(';').map(function (s) {
             if (s !== '') {
               return _react2.default.createElement(
                 _reactstrap.Alert,
@@ -51229,7 +51229,7 @@ var ZSendHUSH = function (_React$Component6) {
             _react2.default.createElement(
               _reactstrap.CardFooter,
               null,
-              hushTxlink,
+              sodatokenTxlink,
               _react2.default.createElement(_reactstrap.Progress, { value: this.state.sendProgress })
             )
           )
@@ -51424,7 +51424,7 @@ var ZWalletTabs = function (_React$Component9) {
       var now = new Date();
       now = now.toISOString().split('.')[0] + 'Z';
 
-      var fileStr = '# Wallet dump created by myhushwallet ' + _package2.default.version + '\n';
+      var fileStr = '# Wallet dump created by sodatokenwallet ' + _package2.default.version + '\n';
       fileStr += '# Created on ' + now + '\n\n\n';
 
       Object.keys(this.props.publicAddresses).forEach(function (key) {
@@ -51434,7 +51434,7 @@ var ZWalletTabs = function (_React$Component9) {
       }.bind(this));
 
       var pkBlob = new Blob([fileStr], { type: 'text/plain;charset=utf-8' });
-      _fileSaver2.default.saveAs(pkBlob, now + '_myhushwallet_private_keys.txt');
+      _fileSaver2.default.saveAs(pkBlob, now + '_sodatokenwallet_private_keys.txt');
     }
   }, {
     key: 'render',
@@ -51582,8 +51582,8 @@ var ZWallet = function (_React$Component10) {
         showSettings: false,
         showWalletGen: false,
         compressPubKey: true,
-        insightAPI: 'https://explorer.myhush.network/api', //TODO2
-        explorerURL: 'https://explorer.myhush.network/', 
+        insightAPI: 'https://explorer.sodatoken.org/api', //TODO2
+        explorerURL: 'https://explorer.sodatoken.org/', 
         useTestNet: false,
         unlockType: UNLOCK_WALLET_TYPE.HD_WALLET
       }
@@ -51609,7 +51609,7 @@ var ZWallet = function (_React$Component10) {
           var pubKey = _hushjs2.default.address.privKeyToPubKey(pk, compressPubKey);
 
           // Testnet or nah
-          var pubKeyHash = useTestNet ? _hushjs2.default.config.testnet.pubKeyHash : _hushjs2.default.config.mainnet.pubKeyHash;
+          var pubKeyHash = useTestNet ? _sodatokenjs2.default.config.testnet.pubKeyHash : _sodatokenjs2.default.config.mainnet.pubKeyHash;
           var publicAddr = _hushjs2.default.address.pubKeyToAddr(pubKey, pubKeyHash);
 
           return publicAddr;
@@ -51618,7 +51618,7 @@ var ZWallet = function (_React$Component10) {
         var publicAddresses = {};
 
         for (var i = 0; i < this.state.privateKeys.length; i++) {
-          var pubKeyHash = this.state.settings.useTestNet ? _hushjs2.default.config.testnet.wif : _hushjs2.default.config.mainnet.wif;
+          var pubKeyHash = this.state.settings.useTestNet ? _sodatokenjs2.default.config.testnet.wif : _sodatokenjs2.default.config.mainnet.wif;
 
           var c_pk_wif;
           var c_pk = this.state.privateKeys[i];
@@ -51626,9 +51626,9 @@ var ZWallet = function (_React$Component10) {
           // If not 64 length, probs WIF format
           if (c_pk.length !== 64) {
             c_pk_wif = c_pk;
-            c_pk = _hushjs2.default.address.WIFToPrivKey(c_pk);
+            c_pk = _sodatokenjs2.default.address.WIFToPrivKey(c_pk);
           } else {
-            c_pk_wif = _hushjs2.default.address.privKeyToWIF(c_pk);
+            c_pk_wif = _sodatokenjs2.default.address.privKeyToWIF(c_pk);
           }
 
           var c_pk_wif = _hushjs2.default.address.privKeyToWIF(c_pk, true, pubKeyHash);
@@ -51728,7 +51728,7 @@ var ZWallet = function (_React$Component10) {
       _settings.useTestNet = !_settings.useTestNet;
 
       if (_settings.useTestNet) {
-        _settings.insightAPI = 'https://aayanl.tech/insight-api-zen/'; //TODO2 hush testnet api
+        _settings.insightAPI = 'https://aayanl.tech/insight-api-zen/'; //TODO2 soda token testnet api
         _settings.explorerURL = 'https://aayanl.tech/'; //explorer testnet
       } else {
         _settings.insightAPI = 'https://explorer.myhush.network/api'; //api normal
@@ -77776,7 +77776,7 @@ module.exports = ret;
 
 var bitcoinjs = __webpack_require__(324);
 var bip32utils = __webpack_require__(499);
-var hushjs = __webpack_require__(284);
+var sodatokenjs = __webpack_require__(284);
 var bs58check = __webpack_require__(109);
 
 // Hierarchical Deterministic wallet
@@ -80696,12 +80696,12 @@ module.exports = exports['default'];
 /***/ (function(module, exports) {
 
 module.exports = {
-	"name": "myhushwallet",
+	"name": "sodatokenwebwallet",
 	"version": "v2.0.7",
-	"description": "Secure Hush wallet online",
+	"description": "Secure Soda Token Wallet Online",
 	"main": "index.js",
-	"repository": "https://github.com/thetrunk/myhushwallet.git",
-	"author": "The Trunk",
+	"repository": "https://github.com/BinaryOmen/SodaTokenWebWallet.git",
+	"author": "R0otChiXor",
 	"license": "MIT",
 	"scripts": {
 		"start": "webpack-dev-server",
@@ -80738,7 +80738,7 @@ module.exports = {
 		"throttled-queue": "^1.0.4",
 		"webpack": "^3.3.0",
 		"webpack-dev-server": "^2.5.1",
-		"hushjs": "^1.0.0"
+		"sodatokenjs": "^1.0.0"
 	},
 	"devDependencies": {
 		"babel-core": "^6.25.0",

@@ -27679,7 +27679,7 @@ var ZNavbar = function (_React$Component) {
           _reactstrap.NavbarBrand,
           { href: '/' },
           _react2.default.createElement('img', { src: '/favicon.ico', height: 42 }),
-          '\xA0wallet.myhush.network'
+          '\xA0webwallet.sodatoken.org'
         ),
         _react2.default.createElement(
           _reactstrap.Collapse,
@@ -30773,7 +30773,7 @@ var ZFooter = function (_React$Component) {
                 'or join our ',
               _react2.default.createElement(
                 'a',
-                { href: 'https://discord.io/hush' },
+                { href: 'https://discord.io/sodatoken' },
                 'Discord '
               ),
                 'server!'),
@@ -30807,19 +30807,19 @@ var ZFooter = function (_React$Component) {
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/MyHush/myhushwallet' },
+                { href: 'https://github.com/BinaryOmen/SodaTokenWebWallet/'},
                 'github'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://myhush.slack.com/' },
+                { href: 'https://sodatoken.slack.com/' },
                 'slack'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://discord.io/hush' },
+                { href: 'https://discord.io/sodatoken/' },
                 'discord'
               ),
               _react2.default.createElement('br', null)
@@ -31286,8 +31286,8 @@ var ZGuide = function (_React$Component) {
                 'Go to ',
                 _react2.default.createElement(
                   'a',
-                  { href: 'https://wallet.sodatoken.org' },
-                  'https://wallet.sodatoken.org'
+                  { href: 'https://webwallet.sodatoken.org' },
+                  'https://webwallet.sodatoken.org'
                 )
               ),
               _react2.default.createElement(
@@ -31339,8 +31339,8 @@ var ZGuide = function (_React$Component) {
                 'If you\'ve created a wallet on ',
                 _react2.default.createElement(
                   'a',
-                  { href: 'https://wallet.sodatoken.org' },
-                  'https://wallet.sodatoken.org'
+                  { href: 'https://webwallet.sodatoken.org' },
+                  'https://webwallet.sodatoken.org'
                 ),
                 ' via the secret phrase, simply re-enter the same phrase.'
               ),
