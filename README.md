@@ -1,4 +1,4 @@
-# Soda Token web wallet
+# Soda Token Web Wallet
 
 Soda Token Web Wallet is a client-side browser-based wallet for Soda Token.
 
