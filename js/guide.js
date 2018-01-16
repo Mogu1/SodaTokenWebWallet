@@ -30753,7 +30753,7 @@ var ZFooter = function (_React$Component) {
                 _react2.default.createElement(
                   'b',
                   null,
-                  'WALLET.MYHUSH.NETWORK'
+                  'WEBWALLET.SODATOKEN.ORG'
                 )
               ),
               _react2.default.createElement(
@@ -30767,7 +30767,7 @@ var ZFooter = function (_React$Component) {
                 'Suggestions?',
                _react2.default.createElement(
                 'a',
-                { href: 'https://myhush.org/#contact' },
+                { href: 'https://sodatoken.org/#contact' },
                 ' Contact us '
               ),
                 'or join our ',
@@ -30795,13 +30795,13 @@ var ZFooter = function (_React$Component) {
               { md: '4' },
               _react2.default.createElement(
                 'a',
-                { href: 'https://myhush.org/' },
+                { href: 'https://sodatoken.org/' },
                 'website'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://forum.myhush.org/' },
+                { href: 'https://forum.sodatoken.org/' },
                 'forum'
               ),
               _react2.default.createElement('br', null),
@@ -31286,8 +31286,8 @@ var ZGuide = function (_React$Component) {
                 'Go to ',
                 _react2.default.createElement(
                   'a',
-                  { href: 'https://wallet.myhush.org' },
-                  'https://wallet.myhush.org'
+                  { href: 'https://wallet.sodatoken.org' },
+                  'https://wallet.sodatoken.org'
                 )
               ),
               _react2.default.createElement(
@@ -31339,8 +31339,8 @@ var ZGuide = function (_React$Component) {
                 'If you\'ve created a wallet on ',
                 _react2.default.createElement(
                   'a',
-                  { href: 'https://wallet.myhush.org' },
-                  'https://wallet.myhush.org'
+                  { href: 'https://wallet.sodatoken.org' },
+                  'https://wallet.sodatoken.org'
                 ),
                 ' via the secret phrase, simply re-enter the same phrase.'
               ),

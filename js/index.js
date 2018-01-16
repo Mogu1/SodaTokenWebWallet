@@ -38149,7 +38149,7 @@ var ZFooter = function (_React$Component) {
                 _react2.default.createElement(
                   'b',
                   null,
-                  'WALLET.MYHUSH.NETWORK'
+                  'WEBWALLET.SODATOKEN.ORG'
                 )
               ),
               _react2.default.createElement(
@@ -38163,13 +38163,13 @@ var ZFooter = function (_React$Component) {
                 'Suggestions?',
                _react2.default.createElement(
                 'a',
-                { href: 'https://myhush.org/#contact' },
+                { href: 'https://sodatoken.org/#contact' },
                 ' Contact us '
               ), 
                 ' or join our ',
               _react2.default.createElement(
                 'a',
-                { href: 'https://discord.io/hush' },
+                { href: 'https://discord.io/sodatoken' },
                 'Discord '
               ),
                 'server!'),
@@ -38181,9 +38181,9 @@ var ZFooter = function (_React$Component) {
                 _react2.default.createElement(
                   'b',
                   null,
-                  'HUSH'
+                  'SODA'
                 ),
-                ': t1UDhNq2aEqvxEbPzcRM8n2QJV8YJ664rXJ'
+                'MYSODAWALLETADRESS'
               )
             ),
             _react2.default.createElement(
@@ -38191,31 +38191,31 @@ var ZFooter = function (_React$Component) {
               { md: '4' },
               _react2.default.createElement(
                 'a',
-                { href: 'https://myhush.org/' },
+                { href: 'https://sodatoken.org/' },
                 'website'
               ),              
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://forum.myhush.org/' },
+                { href: 'https://forum.sodatoken.org/' },
                 'forum'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/MyHush/myhushwallet' },
+                { href: 'https://github.com/BinaryOmen/SodaTokenWebWallet/' },
                 'github'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://myhush.slack.com/' },
+                { href: 'https://soda.slack.com/' },
                 'slack'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://discord.io/hush' },
+                { href: 'https://discord.io/soda/' },
                 'discord'
               ),
               _react2.default.createElement('br', null)
