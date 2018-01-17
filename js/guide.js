@@ -30785,7 +30785,7 @@ var ZFooter = function (_React$Component) {
                 _react2.default.createElement(
                   'b',
                   null,
-                  'HUSH'
+                  'SODA'
                 ),
                 ': t1UDhNq2aEqvxEbPzcRM8n2QJV8YJ664rXJ'
               )
