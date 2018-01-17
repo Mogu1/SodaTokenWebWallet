@@ -31184,7 +31184,7 @@ var ZFaq = function (_React$Component) {
                 { href: 'https://myetherwallet.com' },
                 'MyEtherWallet\'s'
               ),
-              '. We also want to provide the people the ability to interact with the HUSH blockchain easily, without having to run a full node.'
+              '. We also want to provide the people the ability to interact with the SODA TOKEN blockchain easily, without having to run a full node.'
             )
           )
         )

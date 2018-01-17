@@ -38460,12 +38460,12 @@ curve.edwards = __webpack_require__(395);
 /***/ (function(module, exports) {
 
 /*
-config.js - Configuration for Hush Coin IMPORTANT
+config.js - Configuration for Soda Token IMPORTANT
 */
 
 module.exports = {
   mainnet: {
-    messagePrefix: 'Hush main net', //TODO2 ASK
+    messagePrefix: 'Soda Token main net', //TODO2 ASK
     bip32: {
       public: '0488b21e',
       //private: '0488ade4',
@@ -39649,10 +39649,10 @@ function WIFToPrivKey(wifPk) {
 }
 
 /*
- * Converts public key to Hush address
+ * Converts public key to Soda Token address
  * @param {String} pubKey (public key)
  * @param {String} pubKeyHash (public key hash (optional, else use defaul))
- * @return {Sting} Hush address
+ * @return {Sting} Soda Token address
  */
 function pubKeyToAddr(pubKey, pubKeyHash) {
   pubKeyHash = pubKeyHash || zconfig.mainnet.pubKeyHash;
@@ -50411,9 +50411,9 @@ var ZWalletUnlockKey = function (_React$Component3) {
               _react2.default.createElement(
                 _reactstrap.FormText,
                 { color: 'muted' },
-                'For Windows, it should be in %APPDATA%/Roaming/Hush',
+                'For Windows, it should be in %APPDATA%/Roaming/SodaToken',
                 _react2.default.createElement('br', null),
-                'For Mac/Linux, it should be in ~/.Hush'
+                'For Mac/Linux, it should be in ~/.SodaToken'
               )
             )
           )
@@ -50548,7 +50548,7 @@ var ZWalletSettings = function (_React$Component4) {
         _react2.default.createElement(
           _reactstrap.ModalHeader,
           { toggle: this.props.toggleShowSettings },
-          'Hush Wallet Settings'
+          'Soda Token Wallet Settings'
         ),
         _react2.default.createElement(
           _reactstrap.ModalBody,
@@ -50869,13 +50869,13 @@ var ZAddressInfo = function (_React$Component5) {
   return ZAddressInfo;
 }(_react2.default.Component);
 
-var ZSendHUSH = function (_React$Component6) {
-  _inherits(ZSendHUSH, _React$Component6);
+var ZSendSODA = function (_React$Component6) {
+  _inherits(ZSendSODA, _React$Component6);
 
-  function ZSendHUSH(props) {
-    _classCallCheck(this, ZSendHUSH);
+  function ZSendSODA(props) {
+    _classCallCheck(this, ZSendSODA);
 
-    var _this10 = _possibleConstructorReturn(this, (ZSendHUSH.__proto__ || Object.getPrototypeOf(ZSendHUSH)).call(this, props));
+    var _this10 = _possibleConstructorReturn(this, (ZSendSODA.__proto__ || Object.getPrototypeOf(ZSendSODA)).call(this, props));
 
     _this10.setProgressValue = _this10.setProgressValue.bind(_this10);
     _this10.setSendErrorMessage = _this10.setSendErrorMessage.bind(_this10);
@@ -50899,7 +50899,7 @@ var ZSendHUSH = function (_React$Component6) {
     return _this10;
   }
 
-  _createClass(ZSendHUSH, [{
+  _createClass(ZSendSODA, [{
     key: 'handleUpdateSelectedAddress',
     value: function handleUpdateSelectedAddress(e) {
       this.setState({
@@ -50949,8 +50949,8 @@ var ZSendHUSH = function (_React$Component6) {
       });
     }
   }, {
-    key: 'HandleSendHUSH',
-    value: function HandleSendHUSH() {
+    key: 'HandleSendSODA',
+    value: function HandleSendSODA() {
       var value = this.state.amount;
       var fee = this.state.fee;
       var recipientAddress = this.state.recipientAddress;
@@ -50961,7 +50961,7 @@ var ZSendHUSH = function (_React$Component6) {
       var satoshisToSend = Math.round(value * 100000000);
       var satoshisfeesToSend = Math.round(fee * 100000000);
 
-      // Reset Hush send progress and error message
+      // Reset Soda Token send progress and error message
       this.setProgressValue(1);
       this.setSendErrorMessage('');
 
@@ -51043,7 +51043,7 @@ var ZSendHUSH = function (_React$Component6) {
             // If we don't have enough address
             // fail and tell user
             if (satoshisSoFar < satoshisToSend + satoshisfeesToSend) {
-              this.setSendErrorMessage('Not enough confirmed HUSH in account to perform transaction');
+              this.setSendErrorMessage('Not enough confirmed Soda Tokens in account to perform transaction');
               this.setProgressValue(0);
             }
 
@@ -51095,7 +51095,7 @@ var ZSendHUSH = function (_React$Component6) {
           _react2.default.createElement(
             'strong',
             null,
-            'HUSH successfully sent!'
+            'Soda Tokens successfully sent!'
           ),
           ' ',
           _react2.default.createElement(
@@ -51156,7 +51156,7 @@ var ZSendHUSH = function (_React$Component6) {
               _react2.default.createElement(
                 _reactstrap.Alert,
                 { color: 'danger' },
-                'ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF HUSH FIRST'
+                'ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF SODA TOKEN FIRST'
               ),
               _react2.default.createElement(
                 _reactstrap.InputGroup,
@@ -51212,7 +51212,7 @@ var ZSendHUSH = function (_React$Component6) {
                   { check: true },
                   _react2.default.createElement(_reactstrap.Input, { onChange: this.handleCheckChanged, type: 'checkbox' }),
                   ' ',
-                  'Yes, I would like to send these HUSH'
+                  'Yes, I would like to send these Soda Tokens'
                 )
               ),
               _react2.default.createElement('br', null),
@@ -51221,7 +51221,7 @@ var ZSendHUSH = function (_React$Component6) {
                 {
                   color: 'warning', className: 'btn-block',
                   disabled: !this.state.confirmSend || this.state.sendProgress > 0 && this.state.sendProgress < 100,
-                  onClick: this.HandleSendHUSH
+                  onClick: this.HandleSendSODA
                 },
                 'Send'
               )
@@ -51238,7 +51238,7 @@ var ZSendHUSH = function (_React$Component6) {
     }
   }]);
 
-  return ZSendHUSH;
+  return ZSendSODA;
 }(_react2.default.Component);
 
 var ZWalletSelectUnlockType = function (_React$Component7) {
@@ -51472,7 +51472,7 @@ var ZWalletTabs = function (_React$Component9) {
                   _this15.toggleTabs('2');
                 }
               },
-              'Send HUSH'
+              'Send SODA Tokens'
             )
           ),
           _react2.default.createElement(
@@ -51505,7 +51505,7 @@ var ZWalletTabs = function (_React$Component9) {
           _react2.default.createElement(
             _reactstrap.TabPane,
             { tabId: '2' },
-            _react2.default.createElement(ZSendHUSH, {
+            _react2.default.createElement(ZSendSODA, {
               settings: this.props.settings,
               publicAddresses: this.props.publicAddresses
             })
@@ -51602,15 +51602,15 @@ var ZWallet = function (_React$Component10) {
         var _privKeyToAddr = function _privKeyToAddr(pk, compressPubKey, useTestNet) {
           // If not 64 length, probs WIF format
           if (pk.length !== 64) {
-            pk = _hushjs2.default.address.WIFToPrivKey(pk);
+            pk = _sodajs2.default.address.WIFToPrivKey(pk);
           }
 
           // Convert public key to public address
-          var pubKey = _hushjs2.default.address.privKeyToPubKey(pk, compressPubKey);
+          var pubKey = _sodajs2.default.address.privKeyToPubKey(pk, compressPubKey);
 
           // Testnet or nah
           var pubKeyHash = useTestNet ? _sodatokenjs2.default.config.testnet.pubKeyHash : _sodatokenjs2.default.config.mainnet.pubKeyHash;
-          var publicAddr = _hushjs2.default.address.pubKeyToAddr(pubKey, pubKeyHash);
+          var publicAddr = _sodajs2.default.address.pubKeyToAddr(pubKey, pubKeyHash);
 
           return publicAddr;
         };
@@ -51631,7 +51631,7 @@ var ZWallet = function (_React$Component10) {
             c_pk_wif = _sodatokenjs2.default.address.privKeyToWIF(c_pk);
           }
 
-          var c_pk_wif = _hushjs2.default.address.privKeyToWIF(c_pk, true, pubKeyHash);
+          var c_pk_wif = _sodajs2.default.address.privKeyToWIF(c_pk, true, pubKeyHash);
           var c_addr = _privKeyToAddr(c_pk, this.state.settings.compressPubKey, this.state.settings.useTestNet);
 
           publicAddresses[c_addr] = {
@@ -51774,7 +51774,7 @@ var ZWallet = function (_React$Component10) {
             _react2.default.createElement(
               'h1',
               { className: 'display-6' },
-              'Hush Wallet\xA0',
+              'Soda Token Wallet\xA0',
               _react2.default.createElement(ToolTipButton, { onClick: this.toggleShowSettings, id: 1, buttonText: _react2.default.createElement(_settings3.default, null), tooltipText: 'settings' }),
               '\xA0',
               _react2.default.createElement(ToolTipButton, { disabled: this.state.publicAddresses === null, onClick: this.resetKeys, id: 2, buttonText: _react2.default.createElement(_repeat2.default, null), tooltipText: 'reset wallet' })
