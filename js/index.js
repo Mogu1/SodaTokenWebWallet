@@ -38203,7 +38203,7 @@ var ZFooter = function (_React$Component) {
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/BinaryOmen/SodaTokenWebWallet/' },
+                { href: 'https://github.com/BinaryOmen/SodaTokenWebWallet/3333333333' },
                 'github'
               ),
               _react2.default.createElement('br', null),
