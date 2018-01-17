@@ -31145,7 +31145,7 @@ var ZFaq = function (_React$Component) {
                 'Q: How is this secure? Its on a web browser!'
               ),
               _react2.default.createElement('br', null),
-              'A: My Hush Wallet has replicated the core features of the HUSH daemon in JavaScript! So the process of creating and signing the transactions are all done within the browser. No sensitive information is sent through the network.'
+              'A: Soda Wallet has replicated the core features of the Soda Token daemon in JavaScript! So the process of creating and signing the transactions are all done within the browser. No sensitive information is sent through the network.'
             ),
             _react2.default.createElement(
               'p',
